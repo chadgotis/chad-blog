@@ -10,13 +10,14 @@ collections:
     label: "Post"
     folder: "src/content/post"
     create: true
-    slug: "index"
+    slug: "{{slug}}"
     media_folder: ""
     public_folder: ""
     path: "{{title}}/index"
     editor:
       preview: true
     fields:
+      - { label: path, name: "path" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }

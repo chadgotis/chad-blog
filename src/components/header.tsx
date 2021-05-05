@@ -23,9 +23,9 @@ const Header = ({ siteTitle }) => (
               aria-hidden="true"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
@@ -38,9 +38,9 @@ const Header = ({ siteTitle }) => (
               aria-hidden="true"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
@@ -58,24 +58,25 @@ const Header = ({ siteTitle }) => (
               src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
               alt="Workflow"
             /> */}
-            <h2 className="hidden lg:block h-8 w-auto">{siteTitle}</h2>
+            <h2 className="hidden lg:block h-8 w-auto text-lg font-medium text-gray-100">
+              {siteTitle}
+            </h2>
           </div>
           <div className="hidden sm:block sm:ml-auto">
             <div className="flex space-x-4">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                aria-current="page"
               >
                 Blog
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to="/portfolio"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Portfolio
-              </a>
+              </Link>
 
               <a
                 href="#"
@@ -100,7 +101,6 @@ const Header = ({ siteTitle }) => (
         <a
           href="#"
           className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-          aria-current="page"
         >
           Blog
         </a>

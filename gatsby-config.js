@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Tech Savvy`,
+    title: `cmcoding`,
     description: `Blog where you can learn more about the technology world`,
     author: `@cmgotis`,
   },
@@ -14,6 +14,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/post`,
+        name: `markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -36,4 +44,7 @@ module.exports = {
     "gatsby-plugin-postcss",
     `gatsby-plugin-sass`,
   ],
+  flags: {
+    THE_FLAG: false,
+  },
 }
